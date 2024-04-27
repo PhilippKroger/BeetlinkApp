@@ -1,3 +1,40 @@
 <resources>
     <string name="app_name">BeetlinkApp</string>
+    <string name="beetlink">beetlink</string>
+    <string name="enter">вход</string>
+    <string name="register">регистрация</string>
+    <string name="t1">аналитика и таргет трафика</string>
+    <string name="l1">beetlink.ru/</string>
+    <string name="l2">код</string>
+    <string name="short_links">короткие ссылки</string>
+    <string name="targ_links">таргетированные ссылки</string>
+    <string name="full_stat">подробная статистика</string>
+    <string name="f_serv">функционал сервиса</string>
+    <string name="t2">укороченные ссылки с уникальным кодом в конце, обеспечивающим легкость использования</string>
+    <string name="t3">возможность изменять параметры перенаправления без изменения кода короткой ссылки</string>
+    <string name="dinam_changes">динамические изменения</string>
+    <string name="t4">возможность изменять параметры перенаправления без изменения кода короткой ссылки</string>
+    <string name="t5">возможность отслеживать количество переходов, их источники и другую аналитическую информацию</string>
+    <string name="our_clients">наши клиенты</string>
+    <string name="blogers">блогеры</string>
+    <string name="t6">динамичные короткие ссылки позволяют взаимодействовать с аудиторией и получать подробную статистику переходов</string>
+    <string name="statistics">статистика</string>
+    <string name="marketers">маркетологи</string>
+    <string name="t7">удобные и эффективные короткие ссылки предоставляют возможность точного мониторинга статистики переходов по ссылке</string>
+    <string name="devs">разработчики</string>
+    <string name="t8">короткие ссылки обеспечивают таргетирование и статистику переходов для эффективного управления трафиком</string>
+    <string name="plans">тарифы</string>
+    <string name="basic">базовый                                                          </string>
+    <string name="free">бесплатно</string>
+    <string name="t9">— до 10 коротких ссылок<br/>— динамические изменения<br/>— ограниченная статистика</string>
+    <string name="prem">премиум                                                          </string>
+    <string name="pr1">100 ₽ / мес</string>
+    <string name="pr2">премиум (-20%)                                                   </string>
+    <string name="pr3">960 ₽ / год</string>
+    <string name="ps">пользовательское соглашение</string>
+    <string name="cs">политика конфиденциальности</string>
+    <string name="mail1">support@beetlink.ru</string>
+    <string name="mail2">offer@beetlink.ru</string>
+    <string name="connect">подключить</string>
+
 </resources>

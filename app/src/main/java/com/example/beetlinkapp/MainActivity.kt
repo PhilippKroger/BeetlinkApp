@@ -95,7 +95,7 @@ class MainActivity : ComponentActivity() {
                                 modifier = Modifier
                                     .padding(start = 7.dp)
                                     .padding(top = 8.dp),
-                                text = "beetlink",
+                                text = stringResource(R.string.beetlink),
                                 color = Color(0xFF000000),
                                 fontSize = 20.sp,
                                 fontFamily = mFontFamily
@@ -110,7 +110,7 @@ class MainActivity : ComponentActivity() {
                             ) {
                                 Text(
                                     modifier = Modifier.padding(start = 7.dp),
-                                    text = "вход",
+                                    text = stringResource(R.string.enter),
                                     color = Color(0xFFBBBBBB),
                                     fontSize = 16.sp,
                                     fontFamily= mFontFamily
@@ -124,7 +124,7 @@ class MainActivity : ComponentActivity() {
                                 onClick = { /*TODO*/ },
                             ) {
                                 Text(
-                                    text = "регистрация",
+                                    text = stringResource(R.string.register),
                                     color = Color.White,
                                     fontFamily= mFontFamily
                                 )
@@ -134,7 +134,7 @@ class MainActivity : ComponentActivity() {
                         Text(
                             modifier = Modifier.padding(top = 120.dp),
                             fontFamily= FontFamily(Font(R.font.montesserat_regular)),
-                            text = "аналитика и таргет трафика",
+                            text = stringResource(R.string.t1),
                             color = Color(0xFF000000),
                             fontSize = 16.sp,
                         )
@@ -143,7 +143,7 @@ class MainActivity : ComponentActivity() {
                             Text(
                                 modifier = Modifier.padding(top = 10.dp),
                                 fontFamily= mFontFamily,
-                                text = "beetlink.ru/",
+                                text = stringResource(R.string.l1),
                                 color = Color(0xFF000000),
                                 fontSize = 36.sp,
                                 style = TextStyle(fontWeight = FontWeight.Bold)
@@ -152,7 +152,7 @@ class MainActivity : ComponentActivity() {
                             Text(
                                 modifier = Modifier.padding(top = 10.dp),
                                 fontFamily= mFontFamily,
-                                text = "код",
+                                text = stringResource(R.string.l2),
                                 color = Color(0xFFBBBBBB),
                                 fontSize = 36.sp,
                                 style = TextStyle(fontWeight = FontWeight.Bold)
@@ -174,7 +174,7 @@ class MainActivity : ComponentActivity() {
                             )
                             Text(
                                 modifier = Modifier.padding(start=10.dp),
-                                text = "короткие ссылки",
+                                text = stringResource(R.string.short_links),
                                 color = Color.Black,
                                 fontSize = 16.sp,
                                 fontFamily= FontFamily(Font(R.font.montesserat_regular))
@@ -196,7 +196,7 @@ class MainActivity : ComponentActivity() {
                             )
                             Text(
                                 modifier = Modifier.padding(start=10.dp),
-                                text = "таргетированные ссылки",
+                                text = stringResource(R.string.targ_links),
                                 color = Color.Black,
                                 fontSize = 16.sp,
                                 fontFamily= FontFamily(Font(R.font.montesserat_regular))
@@ -218,7 +218,7 @@ class MainActivity : ComponentActivity() {
                             )
                             Text(
                                 modifier = Modifier.padding(start=10.dp),
-                                text = "подробная статистика",
+                                text = stringResource(R.string.full_stat),
                                 color = Color.Black,
                                 fontSize = 16.sp,
                                 fontFamily= FontFamily(Font(R.font.montesserat_regular))
@@ -236,20 +236,7 @@ class MainActivity : ComponentActivity() {
                                     .size(60.dp)
                             )
                         }
-
-                        Column(
-                            horizontalAlignment = Alignment.CenterHorizontally,
-                        ) {
-                            Text(
-                                modifier = Modifier
-                                    .padding(top=50.dp, start = 0.dp, end=0.dp),
-                                fontFamily= mFontFamily,
-                                text = "функционал сервиса",
-                                color = Color(0xFF000000),
-                                fontSize = 30.sp,
-                                style = TextStyle(fontWeight = FontWeight.Bold)
-                            )
-                        }
+                        blockTitle(text = stringResource(R.string.f_serv))
 
                         Column {
                             Box(
@@ -285,7 +272,7 @@ class MainActivity : ComponentActivity() {
                                     Text(
                                         modifier = Modifier.padding(top = 40.dp),
                                         fontFamily= FontFamily(Font(R.font.montesserat_regular)),
-                                        text = "короткие ссылки",
+                                        text = stringResource(R.string.short_links),
                                         color = Color(0xFF000000),
                                         fontSize = 16.sp,
                                     )
@@ -293,7 +280,7 @@ class MainActivity : ComponentActivity() {
                                     Text(
                                         modifier = Modifier.padding(top = 70.dp),
                                         fontFamily= FontFamily(Font(R.font.montesserat_regular)),
-                                        text = "укороченные ссылки с уникальным кодом в конце, обеспечивающим легкость использования",
+                                        text = stringResource(R.string.t2),
                                         color = Color(0xFFBBBBBB),
                                         fontSize = 16.sp,
                                     )
@@ -333,7 +320,7 @@ class MainActivity : ComponentActivity() {
                                     Text(
                                         modifier = Modifier.padding(top = 40.dp),
                                         fontFamily= mFontFamily,
-                                        text = "таргетированные ссылки",
+                                        text = stringResource(R.string.targ_links),
                                         color = Color(0xFF000000),
                                         fontSize = 16.sp,
                                     )
@@ -341,7 +328,7 @@ class MainActivity : ComponentActivity() {
                                     Text(
                                         modifier = Modifier.padding(top = 70.dp),
                                         fontFamily= FontFamily(Font(R.font.montesserat_regular)),
-                                        text = "возможность изменять параметры перенаправления без изменения кода короткой ссылки",
+                                        text = stringResource(R.string.t3),
                                         color = Color(0xFFBBBBBB),
                                         fontSize = 16.sp,
                                     )
@@ -382,7 +369,7 @@ class MainActivity : ComponentActivity() {
                                     Text(
                                         modifier = Modifier.padding(top = 40.dp),
                                         fontFamily= mFontFamily,
-                                        text = "динамические изменения",
+                                        text = stringResource(R.string.dinam_changes),
                                         color = Color(0xFF000000),
                                         fontSize = 16.sp,
                                     )
@@ -390,7 +377,7 @@ class MainActivity : ComponentActivity() {
                                     Text(
                                         modifier = Modifier.padding(top = 70.dp),
                                         fontFamily= FontFamily(Font(R.font.montesserat_regular)),
-                                        text = "возможность изменять параметры перенаправления без изменения кода короткой ссылки",
+                                        text = stringResource(R.string.t4),
                                         color = Color(0xFFBBBBBB),
                                         fontSize = 16.sp,
                                     )
@@ -430,7 +417,7 @@ class MainActivity : ComponentActivity() {
                                     Text(
                                         modifier = Modifier.padding(top = 40.dp),
                                         fontFamily= mFontFamily,
-                                        text = "подробная статистика",
+                                        text = stringResource(R.string.full_stat),
                                         color = Color(0xFF000000),
                                         fontSize = 16.sp,
                                     )
@@ -438,7 +425,7 @@ class MainActivity : ComponentActivity() {
                                     Text(
                                         modifier = Modifier.padding(top = 70.dp),
                                         fontFamily= FontFamily(Font(R.font.montesserat_regular)),
-                                        text = "возможность отслеживать количество переходов, их источники и другую аналитическую информацию",
+                                        text = stringResource(R.string.t5),
                                         color = Color(0xFFBBBBBB),
                                         fontSize = 16.sp,
                                     )
@@ -457,21 +444,7 @@ class MainActivity : ComponentActivity() {
                                     .size(60.dp)
                             )
                         }
-
-                        Column(
-                            horizontalAlignment = Alignment.CenterHorizontally,
-                        ) {
-                            Text(
-                                modifier = Modifier
-                                    .padding(top=30.dp, start = 0.dp, end=0.dp),
-                                fontFamily= mFontFamily,
-                                text = "наши клиенты",
-                                color = Color(0xFF000000),
-                                fontSize = 30.sp,
-                                style = TextStyle(fontWeight = FontWeight.Bold)
-                            )
-                        }
-                        // ========================================================================
+                        blockTitle(text = stringResource(R.string.our_clients))
 
                         Column {
                             Box(
@@ -490,7 +463,7 @@ class MainActivity : ComponentActivity() {
                                         Text(
                                             modifier = Modifier.padding(top = 16.dp),
                                             fontFamily= mFontFamily,
-                                            text = "блогеры",
+                                            text = stringResource(R.string.blogers),
                                             color = Color(0xFF000000),
                                             fontSize = 16.sp,
                                         )
@@ -498,7 +471,7 @@ class MainActivity : ComponentActivity() {
                                         Text(
                                             modifier = Modifier.padding(top = 16.dp),
                                             fontFamily= FontFamily(Font(R.font.montesserat_regular)),
-                                            text = "динамичные короткие ссылки позволяют взаимодействовать с аудиторией и получать подробную статистику переходов",
+                                            text = stringResource(R.string.t6),
                                             color = Color(0xFFBBBBBB),
                                             fontSize = 16.sp,
                                         )
@@ -513,7 +486,7 @@ class MainActivity : ComponentActivity() {
                                         ) {
                                             Text(
                                                 modifier = Modifier,
-                                                text = "статистика",
+                                                text = stringResource(R.string.statistics),
                                                 color = Color.Black,
                                                 fontSize = 12.sp,
                                                 fontFamily= FontFamily(Font(R.font.montesserat_regular))
@@ -530,7 +503,7 @@ class MainActivity : ComponentActivity() {
                                         ) {
                                             Text(
                                                 modifier = Modifier,
-                                                text = "динамические изменения",
+                                                text = stringResource(R.string.dinam_changes),
                                                 color = Color.Black,
                                                 fontSize = 12.sp,
                                                 fontFamily= FontFamily(Font(R.font.montesserat_regular))
@@ -556,7 +529,7 @@ class MainActivity : ComponentActivity() {
                                         Text(
                                             modifier = Modifier.padding(top = 16.dp),
                                             fontFamily= mFontFamily,
-                                            text = "маркетологи",
+                                            text = stringResource(R.string.marketers),
                                             color = Color(0xFF000000),
                                             fontSize = 16.sp,
                                         )
@@ -564,7 +537,7 @@ class MainActivity : ComponentActivity() {
                                         Text(
                                             modifier = Modifier.padding(top = 16.dp),
                                             fontFamily= FontFamily(Font(R.font.montesserat_regular)),
-                                            text = "удобные и эффективные короткие ссылки предоставляют возможность точного мониторинга статистики переходов по ссылке",
+                                            text = stringResource(R.string.t7),
                                             color = Color(0xFFBBBBBB),
                                             fontSize = 16.sp,
                                         )
@@ -579,7 +552,7 @@ class MainActivity : ComponentActivity() {
                                         ) {
                                             Text(
                                                 modifier = Modifier,
-                                                text = "статистика",
+                                                text = stringResource(R.string.statistics),
                                                 color = Color.Black,
                                                 fontSize = 12.sp,
                                                 fontFamily= FontFamily(Font(R.font.montesserat_regular))
@@ -596,7 +569,7 @@ class MainActivity : ComponentActivity() {
                                         ) {
                                             Text(
                                                 modifier = Modifier,
-                                                text = "короткие ссылки",
+                                                text = stringResource(R.string.short_links),
                                                 color = Color.Black,
                                                 fontSize = 12.sp,
                                                 fontFamily= FontFamily(Font(R.font.montesserat_regular))
@@ -622,7 +595,7 @@ class MainActivity : ComponentActivity() {
                                         Text(
                                             modifier = Modifier.padding(top = 16.dp),
                                             fontFamily= mFontFamily,
-                                            text = "разработчики",
+                                            text = stringResource(R.string.devs),
                                             color = Color(0xFF000000),
                                             fontSize = 16.sp,
                                         )
@@ -630,7 +603,7 @@ class MainActivity : ComponentActivity() {
                                         Text(
                                             modifier = Modifier.padding(top = 16.dp),
                                             fontFamily= FontFamily(Font(R.font.montesserat_regular)),
-                                            text = "короткие ссылки обеспечивают таргетирование и статистику переходов для эффективного управления трафиком",
+                                            text = stringResource(R.string.t8),
                                             color = Color(0xFFBBBBBB),
                                             fontSize = 16.sp,
                                         )
@@ -645,7 +618,7 @@ class MainActivity : ComponentActivity() {
                                         ) {
                                             Text(
                                                 modifier = Modifier,
-                                                text = "статистика",
+                                                text = stringResource(R.string.statistics),
                                                 color = Color.Black,
                                                 fontSize = 12.sp,
                                                 fontFamily= FontFamily(Font(R.font.montesserat_regular))
@@ -662,7 +635,7 @@ class MainActivity : ComponentActivity() {
                                         ) {
                                             Text(
                                                 modifier = Modifier,
-                                                text = "таргетированные ссылки",
+                                                text = stringResource(R.string.targ_links),
                                                 color = Color.Black,
                                                 fontSize = 12.sp,
                                                 fontFamily= FontFamily(Font(R.font.montesserat_regular))
@@ -685,20 +658,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-                        Column(
-                            horizontalAlignment = Alignment.CenterHorizontally,
-                        ) {
-                            Text(
-                                modifier = Modifier
-                                    .padding(top=30.dp, start = 0.dp, end=0.dp),
-                                fontFamily= mFontFamily,
-                                text = "тарифы",
-                                color = Color(0xFF000000),
-                                fontSize = 30.sp,
-                                style = TextStyle(fontWeight = FontWeight.Bold)
-                            )
-                        }
-
+                        blockTitle(text = stringResource(R.string.plans))
 
 
                         Column {
@@ -718,7 +678,7 @@ class MainActivity : ComponentActivity() {
                                         Text(
                                             modifier = Modifier.padding(top = 16.dp),
                                             fontFamily= mFontFamily,
-                                            text = "базовый                                                          ",
+                                            text = stringResource(R.string.basic),
                                             color = Color(0xFF000000),
                                             fontSize = 16.sp,
                                             style = TextStyle(fontWeight = FontWeight.Bold)
@@ -728,7 +688,7 @@ class MainActivity : ComponentActivity() {
                                             modifier = Modifier
                                                 .padding(top=10.dp, start = 0.dp, end=0.dp),
                                             fontFamily= mFontFamily,
-                                            text = "бесплатно",
+                                            text = stringResource(R.string.free),
                                             color = Color(0xFF000000),
                                             fontSize = 30.sp,
                                             style = TextStyle(fontWeight = FontWeight.Bold)
@@ -745,26 +705,7 @@ class MainActivity : ComponentActivity() {
                                         )
 
 
-                                        Column(
-                                            horizontalAlignment = Alignment.CenterHorizontally,
-                                        ) {
-                                            TextButton(
-                                                modifier = Modifier
-                                                    .padding(top = 30.dp)
-                                                    .background(
-                                                        Color.Black,
-                                                        shape = RoundedCornerShape(16.dp)
-                                                    ),
-                                                onClick = { /*TODO*/ },
-                                            ) {
-                                                Text(
-                                                    modifier = Modifier.padding(start=80.dp, end=80.dp),
-                                                    text = "подключить",
-                                                    color = Color.White,
-                                                    fontFamily= mFontFamily
-                                                )
-                                            }
-                                        }
+                                        connectBtn()
                                     }
                                 }
                             }
@@ -785,7 +726,7 @@ class MainActivity : ComponentActivity() {
                                         Text(
                                             modifier = Modifier.padding(top = 16.dp),
                                             fontFamily= mFontFamily,
-                                            text = "премиум                                                          ",
+                                            text = stringResource(R.string.prem),
                                             color = Color(0xFF000000),
                                             fontSize = 16.sp,
                                             style = TextStyle(fontWeight = FontWeight.Bold)
@@ -795,7 +736,7 @@ class MainActivity : ComponentActivity() {
                                             modifier = Modifier
                                                 .padding(top=10.dp, start = 0.dp, end=0.dp),
                                             fontFamily= mFontFamily,
-                                            text = "100 ₽ / мес",
+                                            text = stringResource(R.string.pr1),
                                             color = Color(0xFF000000),
                                             fontSize = 30.sp,
                                             style = TextStyle(fontWeight = FontWeight.Bold)
@@ -812,26 +753,7 @@ class MainActivity : ComponentActivity() {
                                             fontSize = 16.sp,
                                         )
 
-                                        Column(
-                                            horizontalAlignment = Alignment.CenterHorizontally,
-                                        ) {
-                                            TextButton(
-                                                modifier = Modifier
-                                                    .padding(top = 30.dp)
-                                                    .background(
-                                                        Color.Black,
-                                                        shape = RoundedCornerShape(16.dp)
-                                                    ),
-                                                onClick = { /*TODO*/ },
-                                            ) {
-                                                Text(
-                                                    modifier = Modifier.padding(start=80.dp, end=80.dp),
-                                                    text = "подключить",
-                                                    color = Color.White,
-                                                    fontFamily= mFontFamily
-                                                )
-                                            }
-                                        }
+                                        connectBtn()
                                     }
                                 }
                             }
@@ -852,7 +774,7 @@ class MainActivity : ComponentActivity() {
                                         Text(
                                             modifier = Modifier.padding(top = 16.dp),
                                             fontFamily= mFontFamily,
-                                            text = "премиум (-20%)                                                   ",
+                                            text = stringResource(R.string.pr2),
                                             color = Color(0xFF000000),
                                             fontSize = 16.sp,
                                             style = TextStyle(fontWeight = FontWeight.Bold)
@@ -862,7 +784,7 @@ class MainActivity : ComponentActivity() {
                                             modifier = Modifier
                                                 .padding(top=10.dp, start = 0.dp, end=0.dp),
                                             fontFamily= mFontFamily,
-                                            text = "960 ₽ / год",
+                                            text = stringResource(R.string.pr3),
                                             color = Color(0xFF000000),
                                             fontSize = 30.sp,
                                             style = TextStyle(fontWeight = FontWeight.Bold)
@@ -879,39 +801,18 @@ class MainActivity : ComponentActivity() {
                                             fontSize = 16.sp
                                         )
 
-                                        Column(
-                                            horizontalAlignment = Alignment.CenterHorizontally,
-                                        ) {
-                                            TextButton(
-                                                modifier = Modifier
-                                                    .padding(top = 30.dp)
-                                                    .background(
-                                                        Color.Black,
-                                                        shape = RoundedCornerShape(16.dp)
-                                                    ),
-                                                onClick = { /*TODO*/ },
-                                            ) {
-                                                Text(
-                                                    modifier = Modifier.padding(start=80.dp, end=80.dp),
-                                                    text = "подключить",
-                                                    color = Color.White,
-                                                    fontFamily= mFontFamily
-                                                )
-                                            }
-                                        }
-
-
+                                        connectBtn()
                                     }
                                 }
                             }
                         }
 
-
                         Text(
-                            modifier = Modifier.padding(top=40.dp)
+                            modifier = Modifier
+                                .padding(top = 40.dp)
                                 .clickable { /* действие при нажатии на ссылку */ },
                             fontFamily= FontFamily(Font(R.font.montesserat_regular)),
-                            text = "пользовательское соглашение",
+                            text = stringResource(R.string.ps),
                             color = Color(0xFFBBBBBB),
                             fontSize = 16.sp
                         )
@@ -920,7 +821,7 @@ class MainActivity : ComponentActivity() {
                             modifier = Modifier
                                 .clickable { /* действие при нажатии на ссылку */ },
                             fontFamily= FontFamily(Font(R.font.montesserat_regular)),
-                            text = "политика конфиденциальности",
+                            text = stringResource(R.string.cs),
                             color = Color(0xFFBBBBBB),
                             fontSize = 16.sp
                         )
@@ -930,26 +831,65 @@ class MainActivity : ComponentActivity() {
                                 .padding(top = 10.dp)
                                 .clickable { /* действие при нажатии на ссылку */ },
                             fontFamily= FontFamily(Font(R.font.montesserat_regular)),
-                            text = "support@beetlink.ru",
+                            text = stringResource(R.string.mail1),
                             color = Color(0xFFBBBBBB),
                             fontSize = 16.sp
                         )
 
                         Text(
                             modifier = Modifier
-                                .padding(bottom=40.dp)
+                                .padding(bottom = 40.dp)
                                 .clickable { /* действие при нажатии на ссылку */ },
                             fontFamily= FontFamily(Font(R.font.montesserat_regular)),
-                            text = "offer@beetlink.ru",
+                            text = stringResource(R.string.mail2),
                             color = Color(0xFFBBBBBB),
                             fontSize = 16.sp
                         )
-                        
-                        
-                        
                     }
                 }
             }
         }
+    }
+}
+
+
+@Composable
+fun connectBtn() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        TextButton(
+            modifier = Modifier
+                .padding(top = 30.dp)
+                .background(
+                    Color.Black,
+                    shape = RoundedCornerShape(16.dp)
+                ),
+            onClick = { /*TODO*/ },
+        ) {
+            Text(
+                modifier = Modifier.padding(start=80.dp, end=80.dp),
+                text = stringResource(R.string.connect),
+                color = Color.White,
+                fontFamily= mFontFamily
+            )
+        }
+    }
+}
+
+@Composable
+fun blockTitle(text: String) {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        Text(
+            modifier = Modifier
+                .padding(top=30.dp, start = 0.dp, end=0.dp),
+            fontFamily= mFontFamily,
+            text = text,
+            color = Color(0xFF000000),
+            fontSize = 30.sp,
+            style = TextStyle(fontWeight = FontWeight.Bold)
+        )
     }
 }
