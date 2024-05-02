@@ -36,5 +36,10 @@
     <string name="mail1">support@beetlink.ru</string>
     <string name="mail2">offer@beetlink.ru</string>
     <string name="connect">подключить</string>
+    <string name="dalee">далее</string>
+    <string name="no_account">ещё нет аккаунта ?</string>
+    <string name="zareg">зарегистрироваться</string>
+    <string name="already_have_account">уже есть аккаунт ?</string>
 
+    <string name="voiti">войти</string>
 </resources>
