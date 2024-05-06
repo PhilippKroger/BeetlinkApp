@@ -14,6 +14,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.beetlinkapp.view.HomePage
 import com.example.beetlinkapp.view.LauncherPage
+import com.example.beetlinkapp.view.auth.SignInPage
 import com.example.beetlinkapp.view.auth.SignUpPage
 
 
@@ -41,9 +42,9 @@ class MainActivity : ComponentActivity() {
             if (accessToken != null && accessToken.isNotEmpty()) {
                 composable("homePage") { HomePage(navController) }
             } else {
-                //composable("SignInPage") { SignInPage(navController) }
+                composable("SignInPage") { SignInPage(navController) }
                 composable("launcherPage") { LauncherPage(navController) }
-                //composable("SignUpPage") { SignUpPage(navController) }
+                composable("SignUpPage") { SignUpPage(navController) }
 
             }
         }

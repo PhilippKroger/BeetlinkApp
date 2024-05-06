@@ -14,4 +14,3 @@ fun SignInPage(navController: NavController) {
         link = stringResource(R.string.register)
     )
 }
-

@@ -17,10 +17,13 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
@@ -37,8 +40,9 @@ import com.example.beetlinkapp.ui.theme.mFontFamily
 @Composable
 fun AuthEntity(title: String, text: String, link: String) {
 
-    val (emailValue, setEmailValue) = remember { mutableStateOf("") }
-    val (passwordValue, setPasswordValue) = remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }
+    var password by remember { mutableStateOf("") }
+    val context = LocalContext.current
 
     Box(
         modifier = Modifier.background(Color(0xFFF3F3F3))
@@ -78,15 +82,33 @@ fun AuthEntity(title: String, text: String, link: String) {
                     style = TextStyle(fontWeight = FontWeight.Bold)
                 )
 
-                AuthEmailTextField(emailValue = emailValue, onEmailValueChange = setEmailValue)
-                AuthPasswordTextField(passwordValue = passwordValue, onPasswordValueChange = setPasswordValue)
+                OutlinedTextField(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 48.dp, vertical = 8.dp),
+                    value = email,
+                    onValueChange = { email = it },
+                    keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Email),
+                    textStyle = TextStyle(fontFamily = mFontFamily, fontSize = 16.sp, color = Color.Black),
+                    label = { Text(text="почта@mail.ru", fontFamily = mFontFamily) })
+
+                OutlinedTextField(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 48.dp, vertical = 8.dp),
+                    value = password,
+                    onValueChange = { password = it },
+                    label = { Text(text="пароль", fontFamily = mFontFamily) },
+                    textStyle = TextStyle(fontFamily = mFontFamily, fontSize = 16.sp, color = Color.Black),
+                    visualTransformation = PasswordVisualTransformation(),
+                    keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Password))
 
                 TextButton(
                     modifier = Modifier
                         .padding(start = 45.dp, top = 10.dp)
                         .width(320.dp)
                         .background(Color.Black, shape = RoundedCornerShape(16.dp)),
-                    onClick = { /*TODO*/ },
+                    onClick = {  }, //loginUser(context, email, password)
                 ) {
                     Text(
                         text = stringResource(R.string.dalee),
@@ -121,18 +143,17 @@ fun AuthEntity(title: String, text: String, link: String) {
     }
 }
 
-
+/*
 @Composable
 fun AuthEmailTextField(
-    emailValue: String,
-    onEmailValueChange: (String) -> Unit,
+    email: String,
 ) {
     OutlinedTextField(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 48.dp, vertical = 8.dp),
-        value = emailValue,
-        onValueChange = onEmailValueChange,
+        value = email,
+        onValueChange = { email = it },
         keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Email),
         textStyle = TextStyle(fontFamily = mFontFamily, fontSize = 16.sp, color = Color.Black),
         label = { Text(text="почта@mail.ru", fontFamily = mFontFamily) })
@@ -141,17 +162,23 @@ fun AuthEmailTextField(
 
 @Composable
 fun AuthPasswordTextField(
-    passwordValue: String,
-    onPasswordValueChange: (String) -> Unit
+    password: String,
 ) {
     OutlinedTextField(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 48.dp, vertical = 8.dp),
-        value = passwordValue,
-        onValueChange = onPasswordValueChange,
+        value = password,
+        onValueChange = { password = it },
         label = { Text(text="пароль", fontFamily = mFontFamily) },
         textStyle = TextStyle(fontFamily = mFontFamily, fontSize = 16.sp, color = Color.Black),
         visualTransformation = PasswordVisualTransformation(),
         keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Password))
+}
+
+ */
+
+fun onButtonClick() {
+    // Отправка данных, например на сервер или в базу данных
+    // Здесь можно использовать значения переменных emailValue и passwordValue
 }

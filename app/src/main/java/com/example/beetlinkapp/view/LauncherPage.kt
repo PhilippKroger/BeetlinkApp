@@ -72,7 +72,7 @@ fun LauncherPage(navController: NavController) {
                 modifier = Modifier.padding(top=20.dp)
             ) {
                 TextButton(
-                    onClick = { /*TODO*/ }
+                    onClick = { navController.navigate("SignInPage") }
                 ) {
                     Text(
                         modifier = Modifier.padding(start = 7.dp),
@@ -87,7 +87,7 @@ fun LauncherPage(navController: NavController) {
                     modifier = Modifier
                         .padding(start = 20.dp)
                         .background(Color.Black, shape = RoundedCornerShape(16.dp)),
-                    onClick = { /*TODO*/ },
+                    onClick = { navController.navigate("SignUpPage") },
                 ) {
                     Text(
                         text = stringResource(R.string.register),
